@@ -1,0 +1,446 @@
+/* 参考html的网页结构用嵌套的方式写页头的less */
+/*修饰符使用的是--，子模块使用__符号
+@header 表示页面头部基本样式样式变量
+@arrow-icon 表示弹出菜单箭头基本样式变量
+@submenu 表示弹出菜单基本样式变量
+*/
+/*定义各种基础样式*/
+.header--basestyle
+{
+    height: 60px;
+    margin: 0;
+    padding: 0;
+
+    border-bottom: 1px solid #ececec;
+    background: #fff;
+}
+header img,
+header ul,
+header div,
+header nav,
+header span,
+header i,
+header a,
+header h3,
+.header--textstyle
+{
+    font-family: Verdana, 'Lantinghei SC', 'Hiragino Sans GB', 'Microsoft Yahei', Helvetica, arial, sans-serif;
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    vertical-align: middle;
+    /*定义这个类本来是为了继承使用的，但是最终未能使用*/
+    /*定义文本修饰熟悉：有上划线、下划线、文本闪烁等,此处默认无格式,应用中a标签中就是取消了下划线*/
+    text-decoration: none;
+}
+a,
+a:hover,
+a:link,
+a:visited
+{
+    border: 0 none;
+}
+/* vip的iocn 的i样式*/
+.vip-lesson i,
+.school-list i
+{
+    display: inline-block;
+
+    width: 14px;
+    height: 14px;
+    margin-right: 10px!important;
+
+    background: url('../img/allicon.png') 0 0 no-repeat;
+    background-size: 64px 64px;
+}
+.vip-lesson .xlkc-icon,
+.school-list .xlkc-icon
+{
+    background: url('../img/xlkc2.png') 0 0 no-repeat;
+    background-position: 0 0;
+    background-size: 12px 12px;
+}
+/* 职业学院iocn */
+.school-list i.python-icon,
+.school-list i.go-icon,
+.school-list i.php-icon,
+.school-list i.java-icon,
+.school-list i.ios-icon,
+.school-list i.android-icon
+{
+    background: url(@{allicon4--png}) 0 0 no-repeat;
+    background-position: 0 0;
+    background-size: 16px 148px;
+}
+/*vip icon的定位位置*/
+.vip-lesson .kck-icon,
+.school-list .kck-icon
+{
+    /*   background-position 属性设置背景图像的起始位置。第一个值是水平位置，第二个值是垂直位置。
+左上角是 0 0。单位是像素 (0px 0px) 或任何其他的 CSS 单位。如果您仅规定了一个值，另一个值将是50%。您可以混合使用 % 和 position 值。
+第四象限，定位坐标都是负数 */
+    background-position: 0 -13px;
+}
+.vip-lesson .zyljt-icon,
+.school-list .zyljt-icon
+{
+    background-position: -45px 0;
+}
+.vip-lesson .zstxt-icon,
+.school-list .zstxt-icon
+{
+    background-position: -30px -13px;
+}
+.vip-lesson .kcbq-icon,
+.school-list .kcbq-icon
+{
+    background-position: -15px -13px;
+}
+.vip-lesson .vip-icon,
+.school-list .vip-icon
+{
+    background-position: -16px 0;
+}
+.vip-lesson .jswd-icon,
+.school-list .jswd-icon
+{
+    background-position: 0 -27px;
+}
+.vip-lesson .wiki-icon,
+.school-list .wiki-icon
+{
+    background-position: -29px -27px;
+}
+.vip-lesson .sq-icon,
+.school-list .sq-icon
+{
+    background-position: 0 2px;
+}
+.vip-lesson .zygx-icon,
+.school-list .zygx-icon
+{
+    background-position: -30px 0;
+}
+.vip-lesson .web-icon,
+.school-list .web-icon
+{
+    background-position: -15px -27px;
+}
+.vip-lesson .android-icon,
+.school-list .android-icon
+{
+    background-position: -45px -14px;
+}
+/* 职业学院各个iocn定位*/
+.school-list i.python-icon
+{
+    background-position: -2px -2px;
+}
+.school-list i.go-icon
+{
+    background-position: -2px -38px;
+}
+.school-list i.php-icon
+{
+    background-position: -2px -21px;
+}
+.school-list i.java-icon
+{
+    background-position: -2px -104px;
+}
+.school-list i.ios-icon
+{
+    background-position: -2px -82px;
+}
+.school-list i.android-icon
+{
+    background-position: -2px -58px;
+}
+/*头部样式*/
+header
+{
+    height: 60px;
+    margin: 0;
+    /*混合可以将一个定义好的class A轻松的引入到另一个class B中，从而简单实现class B继承class A中的所有属性。我们还可以带参数地调用，就像使用函数一样*/
+    padding: 0;
+
+    border-bottom: 1px solid #ececec;
+    background: #fff;
+}
+header .header_row
+{
+    /*其中每一行的行高也是60px；*/
+    line-height: 60px;
+    /*设置相对定位*/
+
+    position: relative;
+
+    width: 1000px;
+    /*设置整体高度为60px；*/
+    height: 60px;
+    margin: 0 auto;
+}
+header .header_row a .logo
+{
+    display: inline-block;
+    float: left;
+
+    width: 109px;
+    height: 60px;
+    margin-right: 60px;
+
+    border: 0 none;
+}
+header .header_row a .logo img
+{
+    float: left;
+
+    width: 109px;
+    margin-top: 10px;
+
+    border: 0 none;
+}
+header .header_row a:hover
+{
+    border: 0 none;
+}
+header .header_row nav
+{
+    /*display:inline-block将对象呈递为内联对象，但是对象的内容作为块对象呈递。旁边的内联对象会被呈递在同一行内，允许空格*/
+    display: inline-block;
+    float: left;
+
+    height: 60px;
+}
+header .header_row nav li
+{
+    /* position: relative;*/
+    font-size: 14px;
+    /*在此父容器中用层级定位*/
+
+    position: relative;
+    /*作为行内元素，但在元素内部为块级元素*/
+
+    display: inline-block;
+    float: left;
+
+    height: 60px;
+    /*向右隔开50px*/
+    margin-right: 50px;
+    /*鼠标放过来变成手形*/
+
+    cursor: pointer;
+}
+header .header_row nav li .arrow-icon
+{
+    display: inline-block;
+    /*导航栏上下箭头*/
+
+    width: 8px;
+    height: 8px;
+    margin-bottom: 2px;
+
+    transform: rotate(-135deg);
+    transform-origin: 4px 4px;
+
+    border-top: 1px solid #c1c1c1;
+    border-left: 1px solid #c1c1c1;
+}
+header .header_row nav li:hover .arrow-icon
+{
+    /*箭头选中以后*/
+    margin-bottom: -2px;
+
+    transform: rotate(45deg);
+    animation: rotate 1s ease normal;
+
+    border-top: 1px solid #35b558;
+    border-left: 1px solid #35b558;
+}
+header .header_row nav .submenu
+{
+    font-size: 12px;
+
+    position: absolute;
+    z-index: 1000;
+    top: 60px;
+    left: 0;
+    left: 250px;
+    /*设置下拉菜单中的整体样式*/
+
+    display: none;
+
+    width: 280px;
+
+    opacity: 0;
+    color: #666;
+    background: #fafafa;
+}
+header .header_row nav .submenu a
+{
+    line-height: 30px;
+    /*这里一定要设计为块级元素，为了每个标签独占一行*/
+
+    display: block;
+
+    height: 30px;
+    padding: 0 15px;
+}
+header .header_row nav .submenu a:hover
+{
+    color: #35b558;
+}
+header .header_row nav .submenu h3
+{
+    font-weight: 300;
+    line-height: 28px;
+
+    height: 28px;
+    margin: 10px 0;
+    padding: 0 15px;
+
+    background: #fafafa;
+}
+header .header_row .icon_box
+{
+    /*登录框的3个图标设置*/
+    float: right;
+
+    width: 200px;
+    height: 60px;
+    margin-right: 10px;
+
+    text-align: right;
+}
+header .header_row .icon_box .search-icon
+{
+    /*头部的搜索图标*/
+    display: inline-block;
+
+    width: 17px;
+    height: 17px;
+    /*通过背景图来显示*/
+
+    background: url('http://e.jikexueyuan.com/headerandfooter/images/search-icon.png') 0 0 no-repeat;
+    background-position: 0, 0;
+    background-size: 17px 17px;
+}
+header .header_row .icon_box .app-icon
+{
+    /*头部的应用程序下载图标*/
+    /*背景图显示的是平板及手机图标，而非二维码图标*/
+    background: url('http://e.jikexueyuan.com/headerandfooter/images/app-icon.png') 0 0 no-repeat;
+    background-position: 0;
+    background-size: 17px;
+}
+header .header_row .icon_box .login-icon
+{
+    /*页头右边的登录图标*/
+    background: url('http://e.jikexueyuan.com/headerandfooter/images/login-icon.png') 0 0 no-repeat;
+    background-position: 0;
+    background-size: 17px;
+}
+header .header_row .icon_box span
+{
+    /*这里设置为行内块元素，如何取消的话，因为span为空元素，会消失在页面中，什么都看不见无论你设置什么颜色*/
+    display: inline-block;
+
+    width: 17px;
+    height: 60px;
+    margin-left: 25px;
+
+    cursor: pointer;
+}
+header .header_row .icon_box .top-icon
+{
+    /*此处生成显示下拉菜单的上半个三角形，用一个宽高都是15px的带框的正方形偏转45度;注意这loginlist类，它其实是下面一个登录标志的类，但是在这里所有的类写作一起，所有指定的时候就罗列这3个，表示生成下拉菜单的上半部分。*/
+    position: absolute;
+    top: -8px;
+    right: 10px;
+
+    display: block;
+    display: inline-block;
+
+    width: 15px;
+    height: 15px;
+
+    transform: rotate(45deg);
+
+    border-top: 1px solid #ececec;
+    border-left: 1px solid #ececec;
+    background: #fff;
+}
+header .header_row .icon_box dd
+{
+    /*定义登录框下拉菜单中样式列表的格式，覆盖原来header a{}设置的字体等设置*/
+    font-size: 12px;
+    line-height: 35px;
+
+    margin: 0;
+    padding-left: 10px;
+
+    text-align: left;
+    vertical-align: middle;
+    /*通过调整在雪碧图中的相对位置，达到显示图标的目的*/
+}
+header .header_row .icon_box dd a
+{
+    /*定义登录框下拉菜单中a标签的格式颜色高度等*/
+    line-height: 35px;
+
+    display: block;
+
+    height: 35px;
+
+    color: #666;
+}
+header .header_row .icon_box dd a reg-btn,
+header .header_row .icon_box dd a login-btn
+{
+    /*定义登录框下拉菜单中a标签中文字等各种排列大小*/
+    line-height: 35px;
+
+    display: inline-block;
+
+    width: 45%;
+    height: 35px;
+    padding: 0 10px;
+
+    text-align: center;
+}
+header .header_row .icon_box dd i,
+header .header_row .icon_box dd #uservip-icon
+{
+    display: inline-block;
+
+    width: 12px;
+    height: 12px;
+    margin-right: 10px;
+    /*background: url("http://e.jikexueyuan.com/headerandfooter/images/allicon2.png") 0 0 no-repeat;*/
+
+    background: url(../img/allicon2.png) 0 0 no-repeat;
+    background-size: 64px 64px;
+}
+header .header_row .icon_box dd .xxzx-icon
+{
+    /*background-position属性设置背景图像的起始位置*/
+    background-position: -16px -15px;
+}
+header .header_row .icon_box dd .grzy-icon
+{
+    background-position: -45px -1px;
+}
+header .header_row .icon_box dd .xxtz-icon
+{
+    background-position: -16px -30px;
+}
+header .header_row .icon_box dd .zhsz-icon
+{
+    background-position: -30px -1px;
+}
+header .header_row .icon_box dd .tc-icon
+{
+    background-position: -16px -1px;
+}
