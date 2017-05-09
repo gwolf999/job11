@@ -343,5 +343,92 @@ header {
                 }
             }
         }
+        .search_box {
+            /*此搜索框，初始状态为缩小10倍，且不透明，用绝对定位方式在浮动着最外层；平时不显示出来，只有点击了搜索图标才放大并遮住导航栏目*/
+            line-height: 59px;
+            position: absolute;
+            z-index: 11000;
+            top: 0;
+            right: 0;
+            display: none;
+            width: 850px;
+            height: 59px;
+            transform: scale(.1, 1);
+            opacity: 0;
+            background: #fff;
+            input {
+                font-size: 12px;
+                line-height: 40px;
+                /*空出右边部分给ios、android、html5选择图标摆放*/
+                width: 400px;
+                height: 40px;
+                margin-top: 10px;
+                margin-left: 10px;
+                vertical-align: top;
+            }
+            a {
+                font-size: 12px;
+                margin-left: 10px;
+                padding: 3px 5px;
+                color: #808080;
+                background: #f5f5f5;
+            }
+        }
+    }
+}
+
+/*定义动画*/
+
+@keyframes scalerun {
+    0% {
+        transform: scale(.1, 1);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1, 1);
+        opacity: 1;
+    }
+}
+
+/*生成初始箭头的样式，用一个长宽都是8px的正方形，显示顶部及左边，然后旋转135度，以后不同角度就是不同旋转角度而已*/
+
+
+/*一定要先创建rotate动画的规则*/
+
+@keyframes rotate {
+    0% {
+        margin-bottom: 2px;
+        transform: rotate(-135deg);
+    }
+    10% {
+        margin-bottom: -2px;
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+/*定义app及登录图标下拉菜单的格式及大小的原始状态*/
+
+@keyframes listshow {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*定义导航栏下拉菜单，选中时候的显示方式*/
+
+
+/*导航栏弹出菜单的动画效果定义 */
+
+@keyframes myfirst {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
