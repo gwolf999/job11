@@ -10,6 +10,12 @@
 - #### 利用less或者sass改善极客学院首页CSS
   - ##### 编写Gulp或FIS脚本对Sass或者Less进行编译
   - ##### 符合性能优化标准进行压缩合并以及充分利用Less或Sass优势少写代码
+- #### 重点步骤
+  - ##### cmd 环境下服务器端安装，c:\Program Files\nodejs>npm install -g less// *npm install less安装失败,一定要在nodejs下的npm目录中进行全局安装*
+
+  - ##### 在CMD环境下进入文件工作目录：cd C:\phpStudy\htdoc\jk_web\job11\jkxy_less
+  - ##### 在CMD环境下执行lessc jkxy_header.less>jkxy_header.css
+  - ##### 全局安装Gulp包： npm install -g gulp  然后，在项目里面安装Gulp： npm install --save-dev gulp 
 - #### 参考资料
   - ##### [Gulp入门教程](http://markpop.github.io/2014/09/17/Gulp%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/) 
   - ##### [前端构建工具gulpjs的使用介绍及技巧](http://www.cnblogs.com/2050/p/4198792.html) 
@@ -19,3 +25,7 @@
 ----------
 2017年05月07日 14时16分42秒
 git@github.com:gwolf999/job11.git
+
+
+
+
