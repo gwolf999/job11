@@ -7,7 +7,7 @@
 - #### 参考资料
   - ##### [30个你必须熟记的CSS选择器](http://colobu.com/2015/03/10/the-30-css-selectors-you-must-memorize/) 
 ### jkxy_less目录
-- #### 利用less或者sass改善极客学院首页CSS
+- #### 题目：利用less或者sass改善极客学院首页CSS
   - ##### 编写Gulp或FIS脚本对Sass或者Less进行编译
   - ##### 符合性能优化标准进行压缩合并以及充分利用Less或Sass优势少写代码
 - #### 重点步骤
@@ -17,7 +17,8 @@
   - ##### 在CMD环境下执行lessc jkxy_header.less>jkxy_header.css
   - ##### 全局安装Gulp包： npm install -g gulp  然后，在项目里面安装Gulp： npm install --save-dev gulp 
 - #### 参考资料
-  - ##### [Gulp入门教程](http://markpop.github.io/2014/09/17/Gulp%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/) 
+  - ##### [gulp详细入门教程](http://www.ydcss.com/archives/18) -很全并且目录内其他文章可参考;内有详细的安装及各种原理解释；
+  - ##### [Gulp入门教程](http://markpop.github.io/2014/09/17/Gulp%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/) --唯一可参考多插件连续下载
   - ##### [前端构建工具gulpjs的使用介绍及技巧](http://www.cnblogs.com/2050/p/4198792.html) 
   - ##### [九个Console命令，让js调试更简单](https://github.com/dwqs/blog/issues/32)
 
