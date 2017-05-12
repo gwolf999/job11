@@ -471,7 +471,8 @@
   }
   /*定义登录框下拉菜单中a标签中文字等各种排列大小*/
   
-  .loginlist .submenu dd a.reg-btn, .loginlist .submenu dd a.login-btn {
+  .loginlist .submenu dd a.reg-btn,
+  .loginlist .submenu dd a.login-btn {
       line-height: 35px;
       display: inline-block;
       width: 45%;

@@ -48,6 +48,34 @@ a, a:hover, a:link, a:visited {
     border: 0 none;
 }
 
+/*定义app及登录图标下拉菜单的格式及大小的选中状态，弹出下载的二维码及上三角形。*/
+
+.loginlist {
+    .submenu {
+        position: absolute;
+        z-index: 1200;
+        top: 58px;
+        right: -10px;
+        display: none;
+        width: 120px;
+        padding: 10px 0;
+        /*全透明*/
+        opacity: 0;
+        background: #fff;
+    }
+    &:hover {
+        .submenu {
+            display: block;
+            -webkit-animation: listshow .8s ease normal;
+            -moz-animation: listshow .8s ease normal;
+            animation: listshow .8s ease normal;
+            opacity: 1;
+            /*我加上的边框*/
+            border: 1px solid black;
+        }
+    }
+}
+
 /* vip的iocn 的i样式*/
 
 .vip-lesson i, .school-list i {
@@ -67,7 +95,7 @@ a, a:hover, a:link, a:visited {
 /* 职业学院iocn */
 
 .school-list i.python-icon, .school-list i.go-icon, .school-list i.php-icon, .school-list i.java-icon, .school-list i.ios-icon, .school-list i.android-icon {
-    background: url(@{allicon4--png}) 0 0 no-repeat;
+    background: url("@{allicon4--png}") 0 0 no-repeat;
     background-position: 0 0;
     background-size: 16px 148px;
 }
@@ -149,7 +177,7 @@ header {
         line-height: @header--height;
         /*设置相对定位*/
         position: relative;
-        a {
+      /*  a { */
             .logo {
                 width: @header--width*0.109;
                 display: inline-block;
@@ -167,7 +195,7 @@ header {
             &:hover {
                 border: 0 none;
             }
-        }
+   /*     } */
         nav {
             height: @header--height;
             /*display:inline-block将对象呈递为内联对象，但是对象的内容作为块对象呈递。旁边的内联对象会被呈递在同一行内，允许空格*/
@@ -204,6 +232,17 @@ header {
                     border-left: @arrow-icon--border--hover;
                     transform: rotate(45deg);
                     animation: rotate 1s ease normal;
+                }
+                &:hover {
+                    .submenu {
+                        display: block;
+                        -webkit-animation: myfirst .8s ease normal;
+                        -moz-animation: myfirst .8s ease normal;
+                        animation: myfirst .8s ease normal;
+                        opacity: 1;
+                        /* background: aqua;*/
+                        border: 1px solid;
+                    }
                 }
             }
             .submenu {
@@ -262,6 +301,20 @@ header {
                 background: url('http://e.jikexueyuan.com/headerandfooter/images/app-icon.png') 0 0 no-repeat;
                 background-position: 0;
                 background-size: 17px;
+                .top-icon {
+                    right: 50px;
+                }
+                img {
+                    width: 100%;
+                }
+                &:hover {
+                    .submenu {
+                        right: -50px;
+                        right: 10px;
+                        padding: 0;
+                        border: 1px solid black;
+                    }
+                }
             }
             .login-icon {
                 /*页头右边的登录图标*/
@@ -376,10 +429,112 @@ header {
         }
     }
 }
+.loginlist .submenu {
+    position: absolute;
+    z-index: 1200;
+    top: 58px;
+    right: -10px;
+    display: none;
+    width: 120px;
+    padding: 10px 0;
+    /*全透明*/
+    opacity: 0;
+    background: #fff;
+    dd {
+        font-size: 12px;
+        line-height: 35px;
+        margin: 0;
+        padding-left: 10px;
+        text-align: left;
+        vertical-align: middle;
+        a {
+            line-height: 35px;
+            display: block;
+            height: 35px;
+            color: #666;           
+        }
+         .login-btn {
+                line-height: 35px;
+                display: inline-block;
+                width: 45%;
+                height: 35px;
+                padding: 0 10px;
+                text-align: center;
+            }
+            .reg-btn {
+                line-height: 35px;
+                display: inline-block;
+                width: 45%;
+                height: 35px;
+                padding: 0 10px;
+                text-align: center;
+            }
+        i {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            margin-right: 10px;
+            /*background: url("http://e.jikexueyuan.com/headerandfooter/images/allicon2.png") 0 0 no-repeat;*/
+            background: url(../img/allicon2.png) 0 0 no-repeat;
+            background-size: 64px 64px;
+        }
+    }
+}
+
+/*定义app及登录图标下拉菜单的格式及大小的选中状态，弹出下载的二维码及上三角形。*/
+ #uservip-icon {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      margin-right: 10px;
+      /*background: url("http://e.jikexueyuan.com/headerandfooter/images/allicon2.png") 0 0 no-repeat;*/
+      background: url(../img/allicon2.png) 0 0 no-repeat;
+      background-size: 64px 64px;
+  }
+
+.loginlist:hover .submenu {
+    display: block;
+    -webkit-animation: listshow .8s ease normal;
+    -moz-animation: listshow .8s ease normal;
+    animation: listshow .8s ease normal;
+    opacity: 1;
+    /*我加上的边框*/
+    border: 1px solid black;
+}
+
+/*设置下拉菜单中的整体样式*/
+
+header nav .submenu {
+    font-size: 12px;
+    position: absolute;
+    z-index: 1000;
+    top: 60px;
+    left: 0;
+    /*debug*/
+    left: 250px;
+    display: none;
+    width: 280px;
+    opacity: 0;
+    color: #666;
+    background: #fff;
+}
 
 /*定义动画*/
 
 @keyframes scalerun {
+    0% {
+        transform: scale(.1, 1);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1, 1);
+        opacity: 1;
+    }
+}
+@-webkit-keyframes scalerun
+/* Safari and Chrome */
+
+{
     0% {
         transform: scale(.1, 1);
         opacity: 0;
@@ -398,12 +553,14 @@ header {
 @keyframes rotate {
     0% {
         margin-bottom: 2px;
+        -webkit-transform: rotate(-135deg);
         transform: rotate(-135deg);
     }
     10% {
         margin-bottom: -2px;
     }
     100% {
+        -webkit-transform: rotate(45deg);
         transform: rotate(45deg);
     }
 }
@@ -418,6 +575,17 @@ header {
         opacity: 1;
     }
 }
+@-webkit-keyframes listshow
+/* Safari and Chrome */
+
+{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
 /*定义导航栏下拉菜单，选中时候的显示方式*/
 
@@ -425,6 +593,17 @@ header {
 /*导航栏弹出菜单的动画效果定义 */
 
 @keyframes myfirst {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes myfirst
+/* Safari and Chrome */
+
+{
     0% {
         opacity: 0;
     }
