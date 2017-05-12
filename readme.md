@@ -17,9 +17,10 @@
   - ##### 在CMD环境下执行lessc jkxy_header.less>jkxy_header.css
   - ##### 全局安装Gulp包： npm install -g gulp  然后，在项目里面安装Gulp： npm install --save-dev gulp 
 - #### 参考资料
+  - ##### [Gulp：任务自动管理工具:阮一峰](http://javascript.ruanyifeng.com/tool/gulp.html)有语法简单介绍，易懂！多任务执行语句可行
   - ##### [gulp详细入门教程](http://www.ydcss.com/archives/18) -很全并且目录内其他文章可参考;内有详细的安装及各种原理解释；
-  - ##### [Gulp入门教程](http://markpop.github.io/2014/09/17/Gulp%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/) --唯一可参考多插件连续下载
-  - ##### [前端构建工具gulpjs的使用介绍及技巧](http://www.cnblogs.com/2050/p/4198792.html) 
+  - ##### [Gulp入门教程](http://markpop.github.io/2014/09/17/Gulp%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/) --有多任务执行案例！*多任务执行语句有误*
+  - ##### [前端构建工具gulpjs的使用介绍及技巧](http://www.cnblogs.com/2050/p/4198792.html) --内有各种正则使用及插件用法
   - ##### [九个Console命令，让js调试更简单](https://github.com/dwqs/blog/issues/32)
 
 
