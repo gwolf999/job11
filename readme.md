@@ -24,9 +24,9 @@
   - ##### [九个Console命令，让js调试更简单](https://github.com/dwqs/blog/issues/32)
 ### BusStopSign目录
 - #### 题目：利用less或sass编写公交站牌
- 
+ ![enter description here][1]
 - #### 重点步骤
-  - ##### 
+  - ##### 用马克鳗做好颜色标记
 - #### 参考资料
   - ##### [Flex 布局教程：语法篇:阮一峰](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)--有语法简单介绍，易懂！
   - ##### [Flex 布局教程：实例篇:阮一峰](http://www.ruanyifeng.com/blog/2015/07/flex-examples.html) 
@@ -37,5 +37,4 @@
 git@github.com:gwolf999/job11.git
 
 
-
-
+  [1]: ./images/%E5%85%AC%E4%BA%A4%E8%BD%A6%E7%AB%99%E7%89%8C2.jpg "公交车站牌2.jpg"
