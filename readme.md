@@ -21,10 +21,26 @@
   - ##### [gulp详细入门教程](http://www.ydcss.com/archives/18) --很全并且目录内其他文章可参考;内有详细的安装及各种原理解释；
   - ##### [Gulp入门教程](http://markpop.github.io/2014/09/17/Gulp%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/) --有多任务执行案例！*多任务执行语句有误*
   - ##### [前端构建工具gulpjs的使用介绍及技巧](http://www.cnblogs.com/2050/p/4198792.html) --内有各种正则使用及插件用法
+  - ##### [**我又重新认识了Gulp--原理讲解**](http://trickyedecay.me/archives/17/)--  **从原理上讲解了gulp执行过程**
+  - ##### [**Gulp的执行顺序原理讲解**](http://trickyedecay.me/archives/9/)--   **本作业的执行顺序就是参考此，并成功。前面的教材有误！**
   - ##### [九个Console命令，让js调试更简单](https://github.com/dwqs/blog/issues/32)
+- #### 备注
+**收获：用less编写各种页面通用组件（含各种状态），在html页面上用组合方式追加！
+通用的显块的字体颜色及背景阴影变化不错(如下：)！要搭建自己的库！**
+
+``` less
+&:hover {
+            color: #35b558;
+            box-shadow: 0 2px 6px #ccc; //添加阴影
+        }
+```
+
+
+要重新复习：[一小时可以学会网页布局的专题讲座](http://zhibo.jikexueyuan.com/jiuye?p=6267fc99caa3953b772b4f844859ae8d&r=0fad34143f34c0ed40c0929c8dbd4c01&u=65906VlYtW8w5fa3r4cpo0VkZfAINpvkBGMnvMN1CeJn6BZoiFjfsJsHUiRP4ezpuULOu8w43zHw0YG0u*2*FQATsV1Q1hITE4NJxSM4D6tyFynmlrsmrgZu21qHTDk5AeuSRJtJuZqA)
+
 ### BusStopSign目录
 - #### 题目：利用less或sass编写公交站牌
- ![enter description here][1]
+![enter description here][1]
 - #### 重点步骤
   - ##### 用马克鳗做好颜色标记
 - #### 参考资料
@@ -35,6 +51,9 @@
 ----------
 2017年05月07日 14时16分42秒
 git@github.com:gwolf999/job11.git
+
+
+ 
 
 
   [1]: ./images/%E5%85%AC%E4%BA%A4%E8%BD%A6%E7%AB%99%E7%89%8C2.jpg "公交车站牌2.jpg"
